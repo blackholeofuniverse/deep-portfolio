@@ -2,6 +2,7 @@ import './globals.css'
 import { Space_Grotesk } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { Analytics } from "@vercel/analytics/react"
 
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] })
 
@@ -19,7 +20,10 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${spaceGrotesk.className} bg-black text-white`}>
         <Navbar />
-        <main className="relative">{children}</main>
+        <main className="relative">
+          {children}
+          <Analytics />
+        </main>
         <Footer />
       </body>
     </html>
