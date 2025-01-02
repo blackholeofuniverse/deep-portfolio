@@ -7,6 +7,7 @@ import AnimatedInput from '@/components/AnimatedInput'
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { BackgroundGradient } from '@/components/ui/background-gradient'
+import { Cover } from "@/components/ui/cover";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
           <h1 className="text-8xl font-medium mb-4 animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent max-md:text-5xl">
             Deepinder Singh
           </h1>
-          <p className="text-2xl mb-1">Flutter Developer <br /> </p>
+          <p className="text-2xl mb-1"><Cover className='bg-transparent rounded-md'>Flutter Developer</Cover><br /> </p>
           <p className='text-nowrap max-md:text-sm mb-4 text-2xl'>Crafting Seamless Cross-Platform Experiences</p>
           <div className="flex justify-center space-x-4">
             <a href="https://github.com/Deep-Manku" target="_blank" rel="noopener noreferrer" className="text-white hover:text-cyan-400 transition-colors z-10">
