@@ -66,7 +66,7 @@ export default function Home() {
         <div className="flex justify-center gap-10 max-md:flex-col">
           <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-[#111111] dark:bg-zinc-900">
             <Image
-              src={"https://cdn.jsdelivr.net/gh/blackholeofuniverse/cdn/tradex.png"}
+              src={"https://cdn.jsdelivr.net/gh/blackholeofuniverse/cdn/tradex.jpg"}
               alt="jordans"
               height="400"
               width="400"
