@@ -20,7 +20,7 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/70 backdrop-blur-md' : 'bg-transparent'}`}>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold">Logo</Link>
+          <Link href="/" className="text-2xl font-semibold">Deep</Link>
           <div className="hidden md:flex space-x-8">
             {['About', 'Projects', 'Experience', 'Education', 'Contact'].map((item) => (
               <Link key={item} href={`#${item.toLowerCase()}`} className="hover:text-cyan-400 transition-colors">
