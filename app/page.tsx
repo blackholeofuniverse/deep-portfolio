@@ -72,7 +72,7 @@ export default function Home() {
               width="400"
               className="object-contain rounded-lg"
             />
-            <p className="text-base sm:text-xl text-white font-semibold mt-4 mb-4 dark:text-neutral-200">
+            <p className="text-base sm:text-xl text-white font-semibold mt-12 mb-4 dark:text-neutral-200">
               Trade X
             </p>
 
@@ -94,14 +94,14 @@ export default function Home() {
               width="500"
               className="object-contain rounded-lg"
             />
-            <p className="text-base sm:text-xl text-white mt-10 mb-4 dark:text-neutral-200">
+            <p className="text-base sm:text-xl text-white mt-10 mb-4 dark:text-neutral-200 font-semibold">
               AttendEase
             </p>
 
             <p className="text-sm text-gray-400 dark:text-neutral-400">
               The Attendance Tracker App, built with Flutter, is a sleek and user-friendly solution for managing attendance in schools, organizations, and events. Designed for cross-platform use, it ensures a consistent and intuitive experience on Android and iOS devices.
             </p>
-            <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 mb-[2px] text-xs font-bold dark:bg-zinc-800">
+            <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 mb-[3px] text-xs font-bold dark:bg-zinc-800">
               <span>View Project</span>
               <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-0 text-white">
                 <ArrowUpRight size={16} />
