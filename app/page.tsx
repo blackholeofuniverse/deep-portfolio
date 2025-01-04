@@ -24,7 +24,7 @@ export default function Home() {
             <a href="https://github.com/Deep-Manku" target="_blank" rel="noopener noreferrer" className="text-white hover:text-cyan-400 transition-colors z-10">
               <Github size={24} />
             </a>
-            <a href="https://www.linkedin.com/in/deep-singh-7394242b2/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-cyan-400 transition-colors z-10">
+            <a href="https://linkedin.com/in/deepinder-singh-7394242b2" target="_blank" rel="noopener noreferrer" className="text-white hover:text-cyan-400 transition-colors z-10">
               <Linkedin size={24} />
             </a>
             {/* <a href="mailto:mishu.dhiman5818@gmail.com" className="text-white hover:text-cyan-400 transition-colors z-10">
