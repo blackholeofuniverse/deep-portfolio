@@ -27,9 +27,9 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/deep-singh-7394242b2/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-cyan-400 transition-colors z-10">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:mishu.dhiman5818@gmail.com" className="text-white hover:text-cyan-400 transition-colors z-10">
+            {/* <a href="mailto:mishu.dhiman5818@gmail.com" className="text-white hover:text-cyan-400 transition-colors z-10">
               <Mail size={24} />
-            </a>
+            </a> */}
           </div>
         </div>
         <ShootingStars />
@@ -52,10 +52,11 @@ export default function Home() {
 
           <div className="max-w-2xl">
             <p className="text-lg mb-4">
-              I&apos;m a self-taught Flutter Developer with a passion for crafting beautiful, user-friendly mobile applications. I have a strong interest in AI and emerging technologies, continuously exploring innovative solutions to bring creative ideas to life. With hands-on experience in app development and a dedication to learning, I aim to push the boundaries of what&apos;s possible in mobile technology.
+              I am a self-taught Flutter Developer with a passion for crafting beautiful, user-friendly mobile applications. I have a strong interest in AI and emerging technologies, and I continuously explore innovative solutions to bring creative ideas to life. With hands-on experience in app development and a dedication to learning, I aim to push the boundaries of what is possible in mobile technology.
+
             </p>
             <p className="text-lg">
-              I believe in the power of technology to transform lives and businesses, and I&apos;m always excited to take on new challenges.
+              I believe in the power of technology to transform lives and businesses, and I am always excited to take on new challenges.
             </p>
           </div>
         </div>
@@ -77,9 +78,9 @@ export default function Home() {
             </p>
 
             <p className="text-sm text-gray-400 dark:text-neutral-400">
-              Your gateway to mastering the stock market without spending a dime! Dive into a lifelike trading experience powered by real-time market data. Perfect for aspiring investors and seasoned traders, this app lets you hone your strategies, build confidence, and track your performanc
+              A virtual trading software for Android and Windows that allows users to train themselves using virtual money. It includes Forex, Indian stocks, popular US stocks, cryptocurrencies, funds, futures, and indices.
             </p>
-            <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+            <button className="rounded-full pl-4 pr-1 py-1 text-white flex mb-4 items-center space-x-1 bg-black mt-5 text-xs font-bold dark:bg-zinc-800">
               <span>Coming soon...</span>
               {/* <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-0 text-white">
                 <ArrowUpRight size={16} />
@@ -117,22 +118,22 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <AnimatedTimelineItem
             title="Flutter Developer"
-            description="I am a skilled Flutter developer with expertise in building cross-platform mobile applications for Android and iOS. I specialize in creating scalable, high-performance apps using Flutter’s robust framework and widgets. My focus is on clean code, seamless functionality, and delivering engaging user experiences."
+            description="I am a Flutter developer with expertise in building cross-platform applications. I specialize in creating scalable, high-performance apps using Flutter&apos;s robust framework and widgets. My focus is on clean code, seamless functionality, and delivering engaging user experiences."
             icon={<Briefcase className="w-5 h-5 text-cyan-400" />}
           />
           <AnimatedTimelineItem
             title="Frontend Development"
-            description="I have a strong background in frontend development, designing responsive and dynamic user interfaces. Using HTML, CSS, JavaScript, and Flutter’s UI system, I create visually appealing layouts that prioritize usability, performance, and accessibility."
+            description="I have a strong background in frontend development, designing responsive and dynamic user interfaces. Using HTML, CSS, JavaScript, and Flutter&apos;s UI system, I create visually appealing layouts that prioritize usability, performance, and accessibility."
             icon={<Briefcase className="w-5 h-5 text-cyan-400" />}
           />
           <AnimatedTimelineItem
-            title="Intermediate Backend and Firebase Skills"
-            description="I possess intermediate skills in backend development and Firebase, handling server-side operations, real-time databases, authentication, and cloud storage. I am adept at setting up APIs and ensuring smooth communication between the client and server for robust app functionality."
+            title="Intermediate Skills in Backend Development and Firebase"
+            description="I possess intermediate skills in backend development and Firebase, managing server-side operations, real-time databases, authentication, and Firestore. Additionally, I developed the logic for historical candlestick charts ranging from 1 day to 5 years from scratch."
             icon={<Briefcase className="w-5 h-5 text-cyan-400" />}
           />
           <AnimatedTimelineItem
-            title="Pro in UI/UX Design in Figma"
-            description="As a UI/UX design expert, I craft intuitive and visually appealing designs using Figma. From wireframes to polished prototypes, I focus on enhancing usability while ensuring consistency and collaboration with developers to bring designs to life."
+            title="UI designer in Figma"
+            description="As a UI designer, I craft intuitive and visually appealing designs using Figma. From wireframes to polished prototypes, I focus on enhancing usability"
           />
         </div>
       </section>
@@ -145,12 +146,12 @@ export default function Home() {
             degree="Bachelor's of Computer Applications"
             institution="Punjab State Aeronautical Engineering College"
             description="Specialized in software development, data structures, algorithms, and computer networks."
-            achievements={[
-              "Thesis: 'Implementing Neural Networks for Predictive Analytics in E-commerce'",
-              "Published research paper on 'Optimizing Deep Learning Models for Mobile Devices'",
-              "Received Outstanding Graduate Student Award",
-              "Led a team project on developing a real-time object recognition system",
-            ]}
+            // achievements={[
+            //   "Thesis: 'Implementing Neural Networks for Predictive Analytics in E-commerce'",
+            //   "Published research paper on 'Optimizing Deep Learning Models for Mobile Devices'",
+            //   "Received Outstanding Graduate Student Award",
+            //   "Led a team project on developing a real-time object recognition system",
+            // ]}
           />
         </div>
       </section>
@@ -165,10 +166,10 @@ export default function Home() {
                 <Phone className="w-5 h-5 text-cyan-400 mr-2" />
                 <span>+1 (123) 456-7890</span>
               </div> */}
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <Mail className="w-5 h-5 text-cyan-400 mr-2" />
                 <span>mishu.dhiman5818@gmail.com</span>
-              </div>
+              </div> */}
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 text-cyan-400 mr-2" />
                 <span>Punjab, India</span>
@@ -183,9 +184,9 @@ export default function Home() {
                 <a href="https://www.linkedin.com/in/deep-singh-7394242b2/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Linkedin size={24} />
                 </a>
-                <a href="mailto:mishu.dhiman5818@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                {/* <a href="mailto:mishu.dhiman5818@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Mail size={24} />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

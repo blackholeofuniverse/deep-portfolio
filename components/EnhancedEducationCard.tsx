@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
 import { useState } from 'react'
@@ -9,7 +10,7 @@ interface EnhancedEducationCardProps {
   degree: string
   institution: string
   description: string
-  achievements: string[]
+  achievements?: string[]
 }
 
 const EnhancedEducationCard: React.FC<EnhancedEducationCardProps> = ({
@@ -41,7 +42,7 @@ const EnhancedEducationCard: React.FC<EnhancedEducationCardProps> = ({
       </div>
       <p className="text-gray-300 mb-2">{description}</p>
       <p className="text-sm text-cyan-300 mb-4">{year}</p>
-      <button
+      {/* <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
       >
@@ -51,7 +52,7 @@ const EnhancedEducationCard: React.FC<EnhancedEducationCardProps> = ({
         ) : (
           <ChevronDown className="ml-2 w-4 h-4" />
         )}
-      </button>
+      </button> */}
       <AnimatePresence>
         {isExpanded && (
           <motion.ul
@@ -61,7 +62,7 @@ const EnhancedEducationCard: React.FC<EnhancedEducationCardProps> = ({
             transition={{ duration: 0.3 }}
             className="mt-4 space-y-2 text-gray-300"
           >
-            {achievements.map((achievement, index) => (
+            {achievements?.map((achievement, index) => (
               <motion.li
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
