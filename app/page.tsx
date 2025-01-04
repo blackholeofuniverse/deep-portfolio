@@ -9,8 +9,24 @@ import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { BackgroundGradient } from '@/components/ui/background-gradient'
 import { Cover } from "@/components/ui/cover";
+import { useForm, ValidationError } from "@formspree/react";
+import { useState } from 'react'
 
 export default function Home() {
+  const [state, handleSubmit] = useForm("mgvvpydz");
+  const [buttonText, setButtonText] = useState('Send Message');
+  const resetForm = (e: React.FormEvent<HTMLFormElement>) => {
+    (e.target as HTMLFormElement).reset();
+  };
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    setButtonText('Sending...');
+    await handleSubmit(e); // Handle the submission
+    if (state.succeeded) {
+      setButtonText('Sent'); // Change button text to 'Sent'
+      resetForm(e); // Clear the form
+      setTimeout(() => setButtonText('Send Message'), 3000); // Reset button text after 3 seconds
+    }
+  };
   return (
     <div className="container mx-auto px-6">
       <section id="hero" className="min-h-screen flex items-center justify-center">
@@ -42,7 +58,7 @@ export default function Home() {
           <div className="w-[400px] h-[400px] relative max-md:w-[200px] max-md:h-[200px]">
             <BackgroundGradient className='rounded-full w-[400px] h-[400px] max-md:w-[200px] max-md:h-[200px]'>
               <Image
-                src="https://cdn.discordapp.com/attachments/1115623849027964930/1324351903391551570/WhatsApp_Image_2025-01-02_at_16.05.19_9d360297.jpg?ex=6777d653&is=677684d3&hm=f0330b8e77541d92817b108eac815852cef415a5b01f05b0679f948b29f51b0d&"
+                src="https://cdn.jsdelivr.net/gh/blackholeofuniverse/cdn/deep.jpg"
                 alt="Deep Singh"
                 fill
                 className="rounded-full object-cover animate-float border-4 border-white"
@@ -146,12 +162,12 @@ export default function Home() {
             degree="Bachelor's of Computer Applications"
             institution="Punjab State Aeronautical Engineering College"
             description="Specialized in software development, data structures, algorithms, and computer networks."
-            // achievements={[
-            //   "Thesis: 'Implementing Neural Networks for Predictive Analytics in E-commerce'",
-            //   "Published research paper on 'Optimizing Deep Learning Models for Mobile Devices'",
-            //   "Received Outstanding Graduate Student Award",
-            //   "Led a team project on developing a real-time object recognition system",
-            // ]}
+          // achievements={[
+          //   "Thesis: 'Implementing Neural Networks for Predictive Analytics in E-commerce'",
+          //   "Published research paper on 'Optimizing Deep Learning Models for Mobile Devices'",
+          //   "Received Outstanding Graduate Student Award",
+          //   "Led a team project on developing a real-time object recognition system",
+          // ]}
           />
         </div>
       </section>
@@ -181,7 +197,7 @@ export default function Home() {
                 <a href="https://github.com/Deep-Manku" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Github size={24} />
                 </a>
-                <a href="https://www.linkedin.com/in/deep-singh-7394242b2/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <a href="https://linkedin.com/in/deepinder-singh-7394242b2" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Linkedin size={24} />
                 </a>
                 {/* <a href="mailto:mishu.dhiman5818@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-colors">
@@ -192,30 +208,49 @@ export default function Home() {
           </div>
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8">
             <h3 className="text-2xl font-semibold mb-4">Send Me a Message</h3>
-            <form className="space-y-4">
-              <AnimatedInput
-                type="text"
-                name="name"
-                label="Your Name"
-                required
-              />
-              <AnimatedInput
-                type="email"
-                name="email"
-                label="Your Email"
-                required
-              />
-              <AnimatedInput
-                name="message"
-                label="Your Message"
-                textarea
-                required
-              />
+            <form onSubmit={handleFormSubmit} className="space-y-4">
+              {/* Name Input */}
+              <div>
+                <AnimatedInput
+                  type="text"
+                  name="name"
+                  label="Your Name"
+                  required
+                />
+                <ValidationError prefix="Name" field="name" errors={state.errors} />
+              </div>
+
+              {/* Email Input */}
+              <div>
+                <AnimatedInput
+                  type="email"
+                  name="email"
+                  label="Your Email"
+                  required
+                />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
+              </div>
+
+              {/* Message Input */}
+              <div>
+                <AnimatedInput
+                  name="message"
+                  label="Your Message"
+                  textarea
+                  required
+                />
+                <ValidationError prefix="Message" field="message" errors={state.errors} />
+              </div>
+
+              {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-md hover:from-cyan-600 hover:to-blue-600 transition-colors"
+                disabled={state.submitting}
+                className={`w-full px-4 py-2 rounded-md text-white bg-gradient-to-r 
+          from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition-colors ${state.submitting ? 'opacity-50 cursor-not-allowed' : ''
+                  }`}
               >
-                Send Message
+                {buttonText}
               </button>
             </form>
           </div>
