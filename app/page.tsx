@@ -66,14 +66,14 @@ export default function Home() {
         <div className="flex justify-center gap-10 max-md:flex-col">
           <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-[#111111] dark:bg-zinc-900">
             <Image
-              src={"https://cdn.jsdelivr.net/gh/blackholeofuniverse/cdn/tradex.jpg"}
+              src={"https://cdn.jsdelivr.net/gh/blackholeofuniverse/cdn/tradequest.jpg"}
               alt="jordans"
               height="400"
               width="400"
               className="object-contain rounded-lg"
             />
             <p className="text-base sm:text-xl text-white font-semibold mt-12 mb-4 dark:text-neutral-200">
-              Trade X
+              TradeQuest
             </p>
 
             <p className="text-sm text-gray-400 dark:text-neutral-400">
