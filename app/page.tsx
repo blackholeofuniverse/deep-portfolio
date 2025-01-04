@@ -123,7 +123,7 @@ export default function Home() {
           />
           <AnimatedTimelineItem
             title="Frontend Development"
-            description="I have a strong background in frontend development, designing responsive and dynamic user interfaces. Using HTML, CSS, JavaScript, and Flutter&apos;s UI system, I create visually appealing layouts that prioritize usability, performance, and accessibility."
+            description="I designed responsive and dynamic user interfaces. Using Flutter, I create visually appealing layouts that prioritize usability, performance, and accessibility"
             icon={<Briefcase className="w-5 h-5 text-cyan-400" />}
           />
           <AnimatedTimelineItem
