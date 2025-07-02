@@ -58,7 +58,7 @@ export default function Home() {
           <div className="w-[400px] h-[400px] relative max-md:w-[200px] max-md:h-[200px]">
             <BackgroundGradient className='rounded-full w-[400px] h-[400px] max-md:w-[200px] max-md:h-[200px]'>
               <Image
-                src="https://cdn.jsdelivr.net/gh/blackholeofuniverse/cdn/deep.jpg"
+                src="https://cdn.jsdelivr.net/gh/blackholeofuniverse/cdn/deepv2.jpg"
                 alt="Deep Singh"
                 fill
                 className="rounded-full object-cover animate-float border-4 border-white"
